@@ -11,7 +11,4 @@ sqa_criteria:
         container: node
         commands:
           - > 
-            env GIT_ASKPASS=/fuj/.git_credential_helper.sh
-            npm --prefix /sqaaas-web run deploy --
-            --user="Diana M. Naranjo <dnaranjo@i3m.upv.es>"
-            --repo=https://${GIT_USER}@github.com/eosc-synergy/sqaaas-web
+            echo "Success"
