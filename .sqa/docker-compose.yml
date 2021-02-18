@@ -8,5 +8,5 @@ services:
     volumes:
      - type: bind
        source: ./
-       target: /sqaaas-web
+       target: /fuji
     command: sleep infinity
