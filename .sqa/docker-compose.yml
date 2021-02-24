@@ -2,8 +2,9 @@ version: "3.7"
 
 services:
   fuji_app_container:
-     build:
-        context: "."
-        dockerfile: "./Dockerfile"
-     image: "synergy/fuji:${GIT_BRANCH}"
-     
+    build:
+      context: "."
+      dockerfile: "./Dockerfile"
+    ports:
+      - "1071:1071"        
+    # image: "organization/fuji:${GIT_BRANCH}"
