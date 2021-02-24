@@ -8,7 +8,7 @@ config:
       # credentials_id: fuji-github
 
   credentials:
-      - id: userpass_sqaaas_web
+      - id: fuji-github
         username_var: GIT_USER
         password_var: GIT_PASSWORD
 
