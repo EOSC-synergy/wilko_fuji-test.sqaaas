@@ -30,8 +30,8 @@ sqa_criteria:
 
 environment:
   JPL_FUJI: "Hello from Jenkins workspace!"
-  JPL_DOCKERPUSH: "fuji_app_container"
+#   JPL_DOCKERPUSH: "fuji_app_container"
   JPL_DOCKERFORCEBUILD: "true"
-  JPL_IGNOREFAILURES: "true"
+#   JPL_IGNOREFAILURES: "true"
 
 timeout: 1200
