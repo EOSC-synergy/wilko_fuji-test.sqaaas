@@ -5,7 +5,7 @@ config:
     fuji_app_repo:
       repo: 'https://github.com/EOSC-synergy/fuji'
       branch: master
-      # credentials_id: fuji-github
+      credentials_id: fuji-github
 
   credentials:
       - id: fuji-github
