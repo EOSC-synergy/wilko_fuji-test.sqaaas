@@ -1,12 +1,9 @@
 version: "3.7"
 
 services:
-  node:
-    image: node
-    container_name: node
-    hostname: "fuji"
-    volumes:
-     - type: bind
-       source: ./
-       target: /fuji
-    command: sleep infinity
+  fuji_app_container:
+     build:
+        context: "."
+        dockerfile: "./Dockerfile"
+     image: "synergy/fuji:${GIT_BRANCH}"
+     
