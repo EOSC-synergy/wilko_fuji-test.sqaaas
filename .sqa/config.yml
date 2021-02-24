@@ -29,7 +29,7 @@ sqa_criteria:
             echo ${JPL_FUJI}
 
 environment:
-  JPL_FUJI: "Hello from Jenkins workspace!"
+  JPL_FUJI: "Hello from Fuji container!"
 #   JPL_DOCKERPUSH: "fuji_app_container"
   JPL_DOCKERFORCEBUILD: "true"
 #   JPL_IGNOREFAILURES: "true"
