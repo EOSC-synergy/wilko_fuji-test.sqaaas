@@ -27,7 +27,7 @@ sqa_criteria:
         commands:
           - >
             echo "Success"
-            printenv JPL_FUJI
+            printenv ${JPL_FUJI}
 
 environment:
   JPL_FUJI: "Hello from Jenkins workspace!"
