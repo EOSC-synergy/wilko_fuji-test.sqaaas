@@ -13,13 +13,13 @@ config:
         password_var: GIT_PASSWORD
 
 sqa_criteria:
-  qc_style:
-    repos:
-      fuji_app_repo:
-        container: fuji_app_container # Allows to specify the Docker container where the given criteria assessment will take place. If using docker_compose, the value could be any of the services defined in the docker-compose.yml
-        tox:
-          testenv:
-            - stylecheck
+#   qc_style:
+#     repos:
+#       fuji_app_repo:
+#         container: fuji_app_container # Allows to specify the Docker container where the given criteria assessment will take place. If using docker_compose, the value could be any of the services defined in the docker-compose.yml
+#         tox:
+#           testenv:
+#             - stylecheck
   qc_doc:
     repos:
       fuji_app_repo:
@@ -27,6 +27,7 @@ sqa_criteria:
         commands:
           - >
             echo "Success"
+            printenv JPL_FUJI
 
 environment:
   JPL_FUJI: "Hello from Jenkins workspace!"
