@@ -16,7 +16,7 @@ sqa_criteria:
 #   qc_style:
 #     repos:
 #       fuji_app_repo:
-#         container: fuji_app_container # Allows to specify the Docker container where the given criteria assessment will take place. If using docker_compose, the value could be any of the services defined in the docker-compose.yml
+#         container: fuji_app_container 
 #         tox:
 #           testenv:
 #             - stylecheck
@@ -26,12 +26,12 @@ sqa_criteria:
         container: fuji_app_container
         commands:
           - >
-            echo "Success"
-            printenv ${JPL_FUJI}
+            echo ${JPL_FUJI}
 
 environment:
   JPL_FUJI: "Hello from Jenkins workspace!"
   JPL_DOCKERPUSH: "fuji_app_container"
-  JPL_IGNOREFAILURES: "defined"
+  JPL_DOCKERFORCEBUILD: "true"
+  JPL_IGNOREFAILURES: "true"
 
 timeout: 1200
