@@ -5,10 +5,10 @@ config:
     fuji_app_repo:
       repo: 'https://github.com/EOSC-synergy/fuji'
       branch: master
-      credentials_id: fuji-github
+#       credentials_id: fuji-github
 
   credentials:
-      - id: fuji-github
+      - id: userpass_sqaaas_web
         username_var: GIT_USER
         password_var: GIT_PASSWORD
 
