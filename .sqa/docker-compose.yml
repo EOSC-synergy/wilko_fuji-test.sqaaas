@@ -16,9 +16,3 @@ services:
      - type: bind
        source: ./fuji_app_repo
        target: /fuji-tester
-
-  
-# Stylecheck Fails with an ERROR:
-# ERROR: InvocationError: '/usr/bin/flake8'
-# ___________________________________ summary ____________________________________
-# ERROR:   stylecheck: commands failed
