@@ -8,3 +8,11 @@ services:
     ports:
       - "1071:1071"        
     # image: "organization/fuji:${GIT_BRANCH}"
+
+  fuji-tester:
+    image: "indigodatacloud/ci-images:python3.6"
+    container_name: "fuji-tester"
+    volumes:
+     - type: bind
+       source: ./fuji_app_repo
+       target: /fuji-tester

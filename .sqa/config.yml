@@ -13,13 +13,13 @@ config:
         password_var: GIT_PASSWORD
 
 sqa_criteria:
-#   qc_style:
-#     repos:
-#       fuji_app_repo:
-#         container: fuji_app_container 
-#         tox:
-#           testenv:
-#             - stylecheck
+  qc_style:
+    repos:
+      fuji_app_repo:
+        container: fuji-tester 
+        tox:
+          tox_file: /fuji-fuji_app_container/tox.ini
+          testenv: stylecheck
   qc_doc:
     repos:
       fuji_app_repo:
