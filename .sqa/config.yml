@@ -18,7 +18,7 @@ sqa_criteria:
       fuji_app_repo:
         container: fuji-tester 
         tox:
-          tox_file: /fuji-fuji_app_container/tox.ini
+          tox_file: /fuji_app_container/tox.ini
           testenv:
             - stylecheck
   qc_doc:
