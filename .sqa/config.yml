@@ -31,10 +31,11 @@ sqa_criteria:
           testenv:
             - stylecheck
 
-environment:
-  JPL_FUJI: "Hello from Fuji container!" #echo ${JPL_FUJI}
-#   JPL_DOCKERPUSH: "fuji_app_container"
-  JPL_DOCKERFORCEBUILD: "true"
-#   JPL_IGNOREFAILURES: "true"
+# environment:
+  # JPL_FUJI: "Hello from Fuji container!" #echo ${JPL_FUJI}
+  # JPL_DOCKERPUSH: "fuji_app_container"
+  # JPL_DOCKERFORCEBUILD: "true"
+  # JPL_IGNOREFAILURES: "true"
+  # LANG: C.UTF-8
 
 timeout: 900
