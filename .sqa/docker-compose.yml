@@ -7,7 +7,7 @@ services:
       dockerfile: "./Dockerfile"
     ports:
       - "1071:1071"        
-    # image: "organization/fuji:${GIT_BRANCH}"
+    image: "steinsteiny/fuji:${GIT_BRANCH}"
 
   fuji-tester:
     image: "indigodatacloud/ci-images:python3.6"

@@ -5,9 +5,14 @@ config:
     fuji_app_repo:
       repo: 'https://github.com/EOSC-synergy/fuji'
       branch: master
+  credentials:
+      - type: username_password
+        id: wilkos-dockerhub
+        username_var: JPL_DOCKERUSER
+        password_var: JPL_DOCKERPASS        
 
 sqa_criteria:
-  qc_fair:
+  qc_doc:
     repos:
       fuji_app_repo:
         container: fuji_app_container
