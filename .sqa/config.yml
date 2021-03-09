@@ -12,25 +12,25 @@ config:
         password_var: JPL_DOCKERPASS        
 
 sqa_criteria:
-  qc_doc:
-    repos:
-      fuji_app_repo:
-        container: fuji_app_container
-        commands:
-          - >
-            curl --location --request POST 'http://localhost:1071/fuji/api/v1/evaluate' -H 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=' -H 'Content-Type: application/json' --data-raw '{ "object_identifier": "https://hdl.handle.net/10261/153475", "test_debug": true, "oaipmh_endpoint": "https://digital.csic.es/dspace-oai/request" }'
-  # qc_style:
+  # qc_doc:
   #   repos:
   #     fuji_app_repo:
-  #       container: fuji-tester 
-  #       tox:
-  #         tox_file: /fuji-tester/tox.ini
-  #         testenv:
-  #           - stylecheck
+  #       container: fuji_app_container
+  #       commands:
+  #         - >
+  #           curl --location --request POST 'http://localhost:1071/fuji/api/v1/evaluate' -H 'Authorization: Basic dXNlcm5hbWU6cGFzc3dvcmQ=' -H 'Content-Type: application/json' --data-raw '{ "object_identifier": "https://hdl.handle.net/10261/153475", "test_debug": true, "oaipmh_endpoint": "https://digital.csic.es/dspace-oai/request" }'
+  qc_style:
+    repos:
+      fuji_app_repo:
+        container: fuji-tester 
+        tox:
+          tox_file: /fuji-tester/tox.ini
+          testenv:
+            - stylecheck
 
-# environment:
+environment:
   # JPL_FUJI: "Hello from Fuji container!" #echo ${JPL_FUJI}
-  # JPL_DOCKERPUSH: "fuji_app_container"
+  JPL_DOCKERPUSH: "fuji_app_container"
   # JPL_DOCKERFORCEBUILD: "true"
   # JPL_IGNOREFAILURES: "true"
   # LANG: C.UTF-8
